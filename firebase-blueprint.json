@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "users": {
+      "title": "Usuários",
+      "description": "Perfis dos praticantes na plataforma",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "customName": { "type": "string" },
+        "age": { "type": "number" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "plans": {
+      "title": "Planos de Treino",
+      "description": "Planos e rotinas de treinos personalizados criados pelo usuário",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "workouts": { "type": "array" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "sessions": {
+      "title": "Sessões Concluídas de Treino",
+      "description": "Registros históricos com cargas, repetições e volume de treino executado",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "planId": { "type": "string" },
+        "workoutId": { "type": "string" },
+        "workoutName": { "type": "string" },
+        "date": { "type": "string" },
+        "durationSeconds": { "type": "number" },
+        "exercises": { "type": "array" },
+        "totalVolumeKg": { "type": "number" },
+        "totalCompletedSets": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
